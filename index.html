@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Password Reveal</title>
+  <title>Amazing Race - Tokyo Takeover</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -27,19 +25,26 @@
       padding: 32px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 1.6rem;
+      margin: 0 0 8px;
+      font-size: 1.4rem;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
 
-    p {
-      margin: 0 0 20px;
-      color: rgba(245, 247, 251, 0.72);
-      line-height: 1.5;
+    .subtitle {
+      font-size: 0.95rem;
+      color: rgba(245, 247, 251, 0.7);
+      margin-bottom: 20px;
     }
 
     input {
@@ -53,9 +58,7 @@
       font-size: 1rem;
     }
 
-    input:focus {
-      border-color: rgba(255, 255, 255, 0.25);
-    }
+    input:focus { border-color: rgba(255, 255, 255, 0.25); }
 
     button {
       width: 100%;
@@ -94,15 +97,22 @@
       line-height: 1.6;
     }
 
-    .secret.show {
-      display: block;
-    }
+    .secret.show { display: block; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Welcome to the Amazing Race - Tokyo Takeover!</h1>
-    <p>Enter the password to reveal your next clue</p>
+    <!-- Simple TikTok-style logo (minimal SVG) -->
+    <div class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 10c5 10 15 15 25 15v15c-10 0-20-3-25-8v28a22 22 0 1 1-22-22c2 0 4 0 6 1v15a8 8 0 1 0 8 8V10z" fill="#25F4EE" opacity="0.8"/>
+        <path d="M55 10c5 10 15 15 25 15v15c-10 0-20-3-25-8v28a22 22 0 1 1-22-22c2 0 4 0 6 1v15a8 8 0 1 0 8 8V10z" fill="#FE2C55" opacity="0.8"/>
+        <path d="M58 10c5 10 15 15 25 15v15c-10 0-20-3-25-8v28a22 22 0 1 1-22-22c2 0 4 0 6 1v15a8 8 0 1 0 8 8V10z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <h1>Welcome to The Amazing Race - Tokyo Takeover</h1>
+    <div class="subtitle">Enter the correct password to reveal your next task.</div>
 
     <input id="passwordInput" type="password" placeholder="Enter password" />
     <button onclick="checkPassword()">Unlock</button>
